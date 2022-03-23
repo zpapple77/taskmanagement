@@ -1,9 +1,9 @@
-// import styles from './index.module.scss'
-export default function Login(){
-    return (
-        // <div className={styles.root}>
-        //     <div className="login"></div>
-        // </div>
-        <div>login</div>
-    )
+import './index.css'
+import { useHistory } from 'react-router-dom'
+export default function Login() {
+    const history = useHistory()
+    function handleClick(){
+        history.push('/home')
+    }
+  return <div className="login" onClick={handleClick}>Start App</div>
 }
